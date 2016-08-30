@@ -20,7 +20,7 @@
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />-->
 
       <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="/css/fanoe.css">
+      <link rel="stylesheet" type="text/css" href="~/css/Custom.css">
       <link rel="stylesheet" type="text/css" href="/css/style.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,11 +51,11 @@
       </header>
 
       @RenderBody()
- 
+    
            <footer class="field dark">
           <div class="container">
               <div class="row">
-
+            @*	@Umbraco.RenderMacro("LoginStatus") *@
                   @{ Html.RenderPartial("BottomNavigation"); }
               </div>
           </div>

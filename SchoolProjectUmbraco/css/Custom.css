@@ -76,11 +76,9 @@ video {
 	font-size: 100%;
 }
 
-
 body {
 	line-height: 1;
 }
-
 
 article,
 aside,
@@ -538,15 +536,21 @@ a.button.fill:hover {
 
 html,
 body {
+    
+    
 	width: 100%;
 	overflow-x: hidden;
+     margin-bottom:50px;
 }
 
 body {
+
+
 	background: transparent;
 	min-height: 100%;
 	min-width: 100%;
 	font-size: 17px;
+    clear:both;
 }
 
 *[role="content"] {
@@ -671,7 +675,7 @@ nav {
 	z-index: 999;
 	background: rgba(0, 0, 0, 0.95);
 	text-align: right;
-	left: 0px;
+	left: -60px;
 	right: 0px;
 	display: block;
 	position: relative;
@@ -679,7 +683,7 @@ nav {
 }
 
 nav > ul {
-	padding: 20px;
+	padding: 10px;
 	position: relative;
 	display: inline-table;
 	width: 100%;
@@ -694,7 +698,7 @@ nav > ul li a,
 nav > ul li span {
 	cursor: pointer;
 	display: inline-block;
-	padding: 25px;
+	padding: 15px;
 	font-size: 20px;
 	font-weight: 500;
 	color: rgba(255, 255, 255, 0.75);
@@ -910,29 +914,36 @@ nav li > ul > li > ul {
 	color: #7f7d7d;
 	transition: all 200ms ease;
 }
+
 footer{
-    width:100%!important;
-    position:relative;
+    min-height:40px;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
 }
 footer ul {
-	margin: 15px auto 0;
+   
+    padding-top:0px;
+	margin: 5px 5px 5px 5px;
 	text-align: center;
+    
 }
 
 footer ul li {
 	position: relative;
 	display: block;
 	text-align: left;
-	padding: 0 0 5px 0;
+	padding: 0 0 0px 0;
 	margin: 0;
-	line-height: 1;
+	line-height: 0;
 }
 
 footer.dark a {
 	color: rgba(255, 255, 255, 0.6) !important;
 	font-size: 1rem;
 	border-bottom: 1px solid transparent;
-	padding-bottom: 3px;
+	padding-bottom: 2px;
 	font-family: "Lato", sans-serif;
 	font-weight: 100;
 }
@@ -1051,15 +1062,6 @@ pre {
 .breadcrumb:hover {
 	background: black;
 }
-.searchbar{
-    float:right;
-    max-width:25%;
-    position:relative;
-}
-.input-group-btn glyphicon glyphicon-search{
-    margin-top: 10px!important;
-
-}
 
 @media (min-width: 768px) {
 
@@ -1068,7 +1070,7 @@ pre {
 .yellow,
 .blue,
 .purple {
-	padding: 80px 0;
+	padding: 00px 0;
 }
 
 .dark img,
@@ -1130,7 +1132,8 @@ pre {
 }
 
 header {
-	padding: 15px 0;
+	
+ 
 }
 
 header .container {
@@ -1254,6 +1257,9 @@ nav .has-child:hover > .sublevel {
 body {
 	width: 100vw;
 	overflow-x: hidden;
+    margin-bottom: 100px;
+    min-height:400px;
+    clear:both;
 }
 
 nav {

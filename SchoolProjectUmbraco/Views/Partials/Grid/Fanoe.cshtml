@@ -26,7 +26,7 @@
                     @foreach (var s in Model.sections) 
 					{
                         <div class="grid-section">
-                            <div class="col-md-@s.grid column">
+                            <div class="col-lg-@s.grid column">
                                 @foreach (var row in s.rows) 
 								{
                                     @renderRow(row, false);
@@ -46,7 +46,7 @@
         @Umbraco.If(singleColumn, "<div class='container'>")
         <div class="row clearfix">
             @foreach ( var area in row.areas ) {
-            <div class="col-md-@area.grid column">
+            <div class="col-lg-@area.grid column">
                 <div @RenderElementAttributes(area)>
                     @foreach (var control in area.controls) {
                         if (control !=null && control.editor != null && control.editor.view != null ) {
