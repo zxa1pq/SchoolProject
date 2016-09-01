@@ -916,6 +916,8 @@ nav li > ul > li > ul {
 }
 
 footer{
+     border-style:solid;
+   border-color:white;
     min-height:40px;
     position:fixed;
     left:0px;
@@ -936,14 +938,14 @@ footer ul li {
 	text-align: left;
 	padding: 0 0 0px 0;
 	margin: 0;
-	line-height: 0;
+	
 }
 
 footer.dark a {
 	color: rgba(255, 255, 255, 0.6) !important;
 	font-size: 1rem;
 	border-bottom: 1px solid transparent;
-	padding-bottom: 2px;
+	padding-bottom: 0px;
 	font-family: "Lato", sans-serif;
 	font-weight: 100;
 }
@@ -951,7 +953,7 @@ footer.dark a {
 footer.dark a:hover {
 	color: rgba(255, 255, 255, 0.9) !important;
 	border-bottom: 1px solid #fff !important;
-	padding-bottom: 3px;
+	padding-bottom: 0px;
 	text-decoration: none;
 }
 
@@ -1339,4 +1341,31 @@ nav > ul li.selected ul li a {
 }
 
 }
+
+.companyInfo {
+   border-style:solid;
+   border-color:white;
+    width:700px;
+}
+.companyInfo ul{
+     
+      border-style:solid;
+      border-color:white;
+   padding-left:5px;
+   
+}
+.companyInfo ul li {
+  
+    float:left;
+   color: #7f7d7d;
+    text-decoration: none;
+    font-size:12px;
+    padding-left:50px;
+    font-family: "Lato", sans-serif;
+    }
+.companyInfo a{
+    text-decoration:none!important;
+    font-size:10px!important;
+}
+
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

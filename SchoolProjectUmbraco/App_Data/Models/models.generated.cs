@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d1f8858b87a05ff5")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4777c0aa90b4df56")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -56,6 +56,51 @@ namespace Umbraco.Web.PublishedContentModels
 		public object Byline
 		{
 			get { return this.GetPropertyValue("byline"); }
+		}
+
+		///<summary>
+		/// Company Address
+		///</summary>
+		[ImplementPropertyType("companyAddress")]
+		public string CompanyAddress
+		{
+			get { return this.GetPropertyValue<string>("companyAddress"); }
+		}
+
+		///<summary>
+		/// Company CVR
+		///</summary>
+		[ImplementPropertyType("companyCVR")]
+		public string CompanyCvr
+		{
+			get { return this.GetPropertyValue<string>("companyCVR"); }
+		}
+
+		///<summary>
+		/// Company Email
+		///</summary>
+		[ImplementPropertyType("companyEmail")]
+		public string CompanyEmail
+		{
+			get { return this.GetPropertyValue<string>("companyEmail"); }
+		}
+
+		///<summary>
+		/// Company Name
+		///</summary>
+		[ImplementPropertyType("companyName")]
+		public string CompanyName
+		{
+			get { return this.GetPropertyValue<string>("companyName"); }
+		}
+
+		///<summary>
+		/// Company Phone
+		///</summary>
+		[ImplementPropertyType("companyPhone")]
+		public string CompanyPhone
+		{
+			get { return this.GetPropertyValue<string>("companyPhone"); }
 		}
 
 		///<summary>

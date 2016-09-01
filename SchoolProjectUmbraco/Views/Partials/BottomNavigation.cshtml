@@ -1,17 +1,21 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 
 @{
+
     var home = CurrentPage.Site();
+
+
 }
 @if (home.Children.Where("Visible").Any())
 {
     @* For each child page under the home node, where the property umbracoNaviHide is not True *@
 foreach (var childPage in home.Children.Where("Visible"))
 {
-    <div class="col-xs-5 col-sm-2">
+    <div class="col-xs-2 col-sm-2">
         @if (childPage.Children.Where("Visible").Any())
         {
-            <strong>@childPage.Name</strong>
+            <span>@childPage.Name</span>
                 @childPages(childPage.Children)
         }
     </div>
@@ -33,7 +37,7 @@ if (pages.Any())
     </ul>
 }
 }
-<div class="col-xs-5 col-sm-2">
+<div class="col-xs-2 col-sm-2">
     <strong>Find us</strong>
     <ul>
         <li>
@@ -46,4 +50,25 @@ if (pages.Any())
             <a href="http://umbraco.com/?utm_source=core&utm_medium=starterkit&utm_content=topic-link&utm_campaign=fanoe" target="_blank">Umbraco.com</a>
         </li>
     </ul>
+</div>
+
+
+<div class="companyInfo">
+       <ul>
+        <li for="companyName"></i>&copy;@Umbraco.Content(1058).companyName</li>
+        <li for="companyEmail">&#9993;<a href="mailto:@(@Umbraco.Content(1058).companyEmail)">@(@Umbraco.Content(1058).companyEmail)</a></li>
+        <li for="companyAddress">@Umbraco.Content(1058).companyAddress</li>
+        <li for="companyPhone">&#9743; Phone: @Umbraco.Content(1058).companyPhone</li>
+        <li for="companyCVR">CVR: @Umbraco.Content(1058).companyCVR</li>
+    </ul>
+
+</div>
+<div>
+    @{
+        var model = new SchoolProjectUmbraco.Models.CompanyModel();
+    }
+   @* @Html.Partial("Partials/CompanyInformation", model, new ViewDataDictionary()) *@
+
+    @*{Html.RenderPartial("CompanyInformation", model, new ViewDataDictionary());*@
+    
 </div>

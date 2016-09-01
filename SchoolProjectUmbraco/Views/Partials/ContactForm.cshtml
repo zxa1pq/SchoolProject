@@ -1,7 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<SchoolProjectUmbraco.Models.ContactModel>
   @using (Html.BeginUmbracoForm<SchoolProjectUmbraco.Controllers.ContactSurfaceController>("HandleFormPost"))
   {
-       
+            
     <label for="emailFrom">Email</label>    @Html.TextBoxFor(x => x.Email, new { @class = "emailFrom", placeholder = "Email", required = "required", type ="email" })
     <br />
     <label for="dropdownGender">Select Gender</label>
