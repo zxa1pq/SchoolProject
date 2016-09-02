@@ -1,0 +1,146 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+  var lat = @Umbraco.Content(1058).companyLongtitude;
+  var lng = @Umbraco.Content(1058).companyLatitude;
+
+  <div id="gmap" class="gmap"></div>
+
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBK-VfMBCJqIbtm6qmFHmWilKz5N7qYtzI"></script>
+  <script type="text/javascript" src="/js/markerwithlabel.js"></script>
+  <script type="text/javascript">
+
+  var stylesArray = [
+    {
+      "featureType": "landscape",
+      "stylers": [
+          
+          {
+            "visibility": "on"
+          }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "stylers": [
+        
+          {
+            "visibility": "on"
+          }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "stylers": [
+         
+          {
+            "visibility": "on"
+          }
+      ]
+    },
+    {
+      "featureType": "road.arterial",
+      "stylers": [
+         
+        
+          {
+            "visibility": "on"
+          }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "stylers": [
+       
+         
+          {
+            "visibility": "on"
+          }
+      ]
+    },
+    {
+      "featureType": "transit",
+      "stylers": [
+     
+          {
+            "visibility": "simplified"
+          }
+      ]
+    },
+    {
+      "featureType": "administrative.province",
+      "stylers": [
+          {
+            "visibility": "on"
+          }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels",
+      "stylers": [
+          {
+            "visibility": "on"
+          },
+          {
+            "lightness": -25
+          },
+          {
+            "saturation": -100
+          }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+          {
+            "hue": "#ffff00"
+          },
+          {
+            "lightness": -25
+          },
+          {
+            "saturation": -97
+          }
+      ]
+    }
+  ];
+     
+    //  var lat = 55.442841;
+   //   var lng = 11.797160;
+  
+      var coordinate = new google.maps.LatLng(@lat, @lng);
+
+  function initialize() {
+    var mapOptions = {
+      center: coordinate,
+      zoom: 18,
+      styles: stylesArray,
+      mapTypeControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      backgroundColor: "#eeeeee",
+        
+    };
+
+    var map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
+
+    var marker = new MarkerWithLabel({
+      position: coordinate,
+      draggable: false,
+      raiseOnDrag: false,
+      icon: 'http://maps.gstatic.com/mapfiles/markers2/marker.png',
+      map: map,
+      animation: google.maps.Animation.DROP,
+      labelContent: '<i class="fa fa-map-marker text-base fa-4x"></i>',
+      labelAnchor: new google.maps.Point(14, 32), // This is important for placement consistency while zooming and in general (dependent on actual marker (label) size)
+      labelClass: 'label'
+    });
+
+    marker.setMap(map);
+
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+}

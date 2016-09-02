@@ -1367,5 +1367,11 @@ nav > ul li.selected ul li a {
     text-decoration:none!important;
     font-size:10px!important;
 }
+.gmap {
+  position: relative;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+}
 
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
