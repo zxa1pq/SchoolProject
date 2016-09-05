@@ -305,15 +305,25 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\Custom.css" />
     <Content Include="css\fanoe.css" />
+    <Content Include="css\jquery.cookiebar.css" />
     <Content Include="css\rte.css" />
     <Content Include="css\style.css" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.cookiebar.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="packages.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="scripts\cookie-notification.js" />
     <Content Include="scripts\fanoe.js" />
+    <None Include="scripts\jquery-3.1.0.intellisense.js" />
+    <Content Include="scripts\jquery-3.1.0.js" />
+    <Content Include="scripts\jquery-3.1.0.min.js" />
+    <Content Include="scripts\jquery-3.1.0.slim.js" />
+    <Content Include="scripts\jquery-3.1.0.slim.min.js" />
+    <Content Include="scripts\jquery.cookie-1.4.1.min.js" />
+    <Content Include="scripts\jquery.cookie.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -529,6 +539,8 @@
     <Content Include="Views\Partials\ContactForm.cshtml" />
     <Content Include="App_Plugins\CharLimiter\package.manifest" />
     <Content Include="Views\Partials\CompanyInformation.cshtml" />
+    <Content Include="scripts\jquery-3.1.0.slim.min.map" />
+    <Content Include="scripts\jquery-3.1.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

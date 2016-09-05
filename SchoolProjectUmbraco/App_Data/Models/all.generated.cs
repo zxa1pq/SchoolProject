@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4777c0aa90b4df56")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5ff8bbc09514482d")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -99,6 +99,24 @@ namespace Umbraco.Web.PublishedContentModels
 		public string CompanyEmail
 		{
 			get { return this.GetPropertyValue<string>("companyEmail"); }
+		}
+
+		///<summary>
+		/// Company Latitude
+		///</summary>
+		[ImplementPropertyType("companyLatitude")]
+		public string CompanyLatitude
+		{
+			get { return this.GetPropertyValue<string>("companyLatitude"); }
+		}
+
+		///<summary>
+		/// Company Longtitude
+		///</summary>
+		[ImplementPropertyType("companyLongtitude")]
+		public string CompanyLongtitude
+		{
+			get { return this.GetPropertyValue<string>("companyLongtitude"); }
 		}
 
 		///<summary>
