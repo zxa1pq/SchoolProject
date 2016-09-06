@@ -7,6 +7,8 @@
 
 
 }
+
+
 @if (home.Children.Where("Visible").Any())
 {
     @* For each child page under the home node, where the property umbracoNaviHide is not True *@
@@ -51,10 +53,9 @@ if (pages.Any())
         </li>
     </ul>
 </div>
-
-
 <div class="companyInfo">
-       <ul>
+    <span>Company Information</span>
+    <ul>
         <li for="companyName"></i>&copy;@Umbraco.Content(1058).companyName</li>
         <li for="companyEmail">&#9993;<a href="mailto:@(@Umbraco.Content(1058).companyEmail)">@(@Umbraco.Content(1058).companyEmail)</a></li>
         <li for="companyAddress">@Umbraco.Content(1058).companyAddress</li>
@@ -62,13 +63,4 @@ if (pages.Any())
         <li for="companyCVR">CVR: @Umbraco.Content(1058).companyCVR</li>
     </ul>
 
-</div>
-<div>
-    @{
-        var model = new SchoolProjectUmbraco.Models.CompanyModel();
-    }
-   @* @Html.Partial("Partials/CompanyInformation", model, new ViewDataDictionary()) *@
-
-    @*{Html.RenderPartial("CompanyInformation", model, new ViewDataDictionary());*@
-    
 </div>

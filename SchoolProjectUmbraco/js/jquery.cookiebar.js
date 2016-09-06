@@ -23,12 +23,12 @@
 			var doReturn = false;
 		}
 		var defaults = {
-		    message: ' <br /> Vi anvender cookies til teknisk funktionalitet, webstatistik og for at forbedre brugervenligheden. <br /> N&aring;r du benytter vores website, giver du samtykke til anvendelsen af cookies. <br /> L&aelig;s mere om cookies og hvordan de fjernes her. <br />', //Message displayed on bar
+		    message: ' <br /> Vi anvender cookies til teknisk funktionalitet, webstatistik og for at forbedre brugervenligheden. <br /> N&aring;r du benytter vores website, giver du samtykke til anvendelsen af cookies. <br /> L&aelig;s mere om cookies og hvordan de fjernes her. <br /> <br />', //Message displayed on bar
 			acceptButton: true, //Set to true to show accept/enable button
 			acceptText: 'Jeg accepterer', //Text on accept/enable button
 			acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, //Function to run after accept
-			declineButton: false, //Set to true to show decline/disable button
-			declineText: 'Deaktiver Cookies', //Text on decline/disable button
+			declineButton: true, //Set to true to show decline/disable button
+			declineText: 'Forlad siden', //Text on decline/disable button
 			declineFunction: function(cookieValue){if(cookieValue=='enabled' || cookieValue=='accepted') window.location = window.location.href;}, //Function to run after decline
 			policyButton: false, //Set to true to show Privacy Policy button
 			policyText: 'Privacy Policy', //Text on Privacy Policy button
@@ -44,7 +44,7 @@
 			element: 'body', //Element to append/prepend cookieBar to. Remember "." for class or "#" for id.
 			append: false, //Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS
 			fixed: false, //Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position
-			bottom: false, //Force CSS when fixed, so bar appears at bottom of website
+			bottom: true, //Force CSS when fixed, so bar appears at bottom of website
 			zindex: '', //Can be set in CSS, although some may prefer to set here
 			domain: String(window.location.hostname), //Location of privacy policy
 			referrer: String(document.referrer) //Where visitor has come from
@@ -171,6 +171,7 @@
 				}
 				document.cookie = cookieEntry.replace('{value}','declined');
 				removeBar(options.declineFunction);
+                history.go(-1)
 			};
 			var anyClick = function(e){
 				if(!$(e.target).hasClass('cb-policy')) cookieAccept();
