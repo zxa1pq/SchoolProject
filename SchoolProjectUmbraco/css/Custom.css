@@ -914,7 +914,7 @@ nav {
 footer {
     border-style: solid;
     border-color: white;
-    min-height: 40px;
+    min-height: 50px;
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -923,7 +923,7 @@ footer {
 
     footer ul {
         padding-top: 0px;
-        margin: 5px 5px 5px 5px;
+        margin: 0px 5px 5px 0px;
         text-align: center;
     }
 
@@ -1412,16 +1412,18 @@ pre {
 }
 
 .companyInfo {
-    border-style: solid;
-    border-color: white;
-    
-    border-right-color:white;
-    border-right:1px;
+ 
+   
 }
-
+.companyInfo span{
+   
+  
+}
     .companyInfo ul {
+        display:inline-block;
         border-style: solid;
         border-color: white;
+        border-left:white!important;
     }
 
         .companyInfo ul li {

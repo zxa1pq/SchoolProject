@@ -19,7 +19,7 @@ var HP = Model.Content.AncestorsOrSelf(1).FirstOrDefault();
         @if(childPage.DocumentTypeAlias == "textPage" || childPage.DocumentTypeAlias == "landingPage")
         {
         <span>@childPage.Name</span>
-        @childPages(childPage.Children)
+        @childPages(childPage.Children.Where("Visible"))
         } else {
         <a href="@childPage.Url">@childPage.Name</a>
         }
