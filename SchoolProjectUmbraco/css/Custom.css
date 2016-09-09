@@ -74,10 +74,12 @@ video {
     background: transparent;
     vertical-align: baseline;
     font-size: 100%;
+   
 }
 
 body {
-    line-height: 1;
+    line-height: 0;
+     overflow-y:hidden;
 }
 
 article,
@@ -174,6 +176,7 @@ html {
 
 .dark {
     background: #1c1c1e;
+    overflow-y:hidden;
 }
 
     .dark * {
@@ -539,6 +542,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     margin-bottom: 50px;
+
 }
 
 body {
@@ -760,6 +764,7 @@ nav {
     background-repeat: no-repeat;
     background-position: center center;
     color: #000;
+
 }
 
     .dark .row,
@@ -920,7 +925,9 @@ footer {
     bottom: 0px;
     width: 100%;
 }
-
+footer span{
+    font-size:14px;
+}
     footer ul {
         padding-top: 0px;
         margin: 0px 5px 5px 0px;
@@ -937,7 +944,7 @@ footer {
 
     footer.dark a {
         color: rgba(255, 255, 255, 0.6) !important;
-        font-size: 1rem;
+        font-size: 13px;
         border-bottom: 1px solid transparent;
         padding-bottom: 0px;
         font-family: "Lato", sans-serif;
@@ -1321,14 +1328,16 @@ pre {
 }
 
 @media (max-width: 768px) {
-    .dark, .light, .yellow, .blue, .purple{
-        padding:20px;
+    .dark, .light, .yellow, .blue, .purple {
+        padding: 20px;
     }
-    #btmNav{
-        width:0;
-        height:0;
-        display:none;
+
+    #btmNav {
+        width: 0;
+        height: 0;
+        display: none;
     }
+
     .breadcrumb {
         text-align: center;
         padding: 20px 0;
@@ -1336,7 +1345,7 @@ pre {
     }
 
     #ftbtmRow {
-      display:inline-block!important;
+        display: inline-block !important;
     }
 
     footer {
@@ -1344,7 +1353,7 @@ pre {
         left: 0px;
         bottom: 0px;
         width: 100%;
-        min-height:160px;
+        min-height: 160px;
     }
 
 
@@ -1354,6 +1363,7 @@ pre {
 
         footer ul {
             display: none;
+            padding:2px;
         }
 
             footer ul li {
@@ -1375,18 +1385,15 @@ pre {
     .companyInfo {
         margin: auto;
         visibility: visible !important;
-
     }
 
         .companyInfo ul {
             margin: auto;
             clear: both;
-       
         }
 
             .companyInfo ul li {
-                display:inline;
-                           
+                display: inline;
                 visibility: visible;
                 color: #7f7d7d;
                 text-decoration: none;
@@ -1412,26 +1419,36 @@ pre {
         }
 }
 
+@media (max-width: 300px) {
+
+    .companyInfo {
+
+    }
+}
+
+footer #ftbtmRow{
+    display:inline-block;
+
+}
 .companyInfo {
- 
-   
+    float: right;
+   z-index:9999;
+
+   border-left-color:white;
 }
-.companyInfo span{
-   
-  
-}
+
+    .companyInfo span {
+    }
+
     .companyInfo ul {
-        display:inline-block;
-        border-style: solid;
-        border-color: white;
-        border-left:white!important;
+        display: inline-block;
     }
 
         .companyInfo ul li {
             visibility: visible;
             color: #7f7d7d;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 14px;
             font-family: "Lato", sans-serif;
         }
 
@@ -1462,5 +1479,7 @@ pre {
         letter-spacing: 0.6px !important;
     }
 
-
+    #umb-grid{
+        overflow-y:hidden;
+    }
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

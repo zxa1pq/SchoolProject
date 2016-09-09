@@ -14,7 +14,7 @@
     @* For each child page under the home node, where the property umbracoNaviHide is not True *@
 foreach (var childPage in home.Children.Where("Visible"))
 {
-    <div class="col-xs-2 col-sm-2" id="btmNav">
+    <div class="col-xs-1 col-sm-2" id="btmNav">
         @if (childPage.Children.Where("Visible").Any())
         {
             <span>@childPage.Name</span>
@@ -54,7 +54,7 @@ if (pages.Any())
     </ul>
 </div>
 <div class="companyInfo">
-    <span>Company Information</span>
+    
     <ul>
         <li for="companyName"></i>&copy;@Umbraco.Content(1058).companyName</li>
         <li for="companyEmail">&#9993;<a href="mailto:@(@Umbraco.Content(1058).companyEmail)">@(@Umbraco.Content(1058).companyEmail)</a></li>
