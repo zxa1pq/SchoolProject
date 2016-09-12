@@ -312,6 +312,7 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.cookiebar.js" />
     <Content Include="js\jquery.min.js" />
+    <Content Include="js\SpinnerFace.js" />
     <Content Include="packages.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
