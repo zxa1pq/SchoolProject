@@ -80,6 +80,7 @@ video {
 body {
     line-height: 0;
      overflow-y:hidden;
+     min-height:100%
 }
 
 article,
@@ -920,10 +921,11 @@ footer {
     border-style: solid;
     border-color: white;
     min-height: 50px;
-    position: fixed;
+    position: absolute;
     left: 0px;
-    bottom: 0px;
+  
     width: 100%;
+    padding-top:0px!important;
 }
 footer span{
     font-size:14px;
@@ -1349,7 +1351,7 @@ pre {
     }
 
     footer {
-        position: fixed;
+        padding-top:10px;
         left: 0px;
         bottom: 0px;
         width: 100%;
@@ -1463,6 +1465,7 @@ footer #ftbtmRow{
     height: 300px;
     margin: 0;
     padding: 0;
+    z-index:999;
 }
 
 #cookie-bar {
@@ -1482,4 +1485,20 @@ footer #ftbtmRow{
     #umb-grid{
         overflow-y:hidden;
     }
+#cover {
+    background:  url('../Media/Preloader_10.gif') no-repeat scroll center center #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#goTop{
+    background:blue;
+    padding:5px;
+    position:fixed;
+    top:-100px;
+    right:10px;
+}
+.umb-grid{
+    min-height:776px;
+}
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

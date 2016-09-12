@@ -15,6 +15,14 @@
     <link href="//fonts.googleapis.com/css?family=Merriweather:400,700,300,900" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
     <script src="~/js/jquery.min.js"></script>
+    
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            var a = document.getElementById('homeDiv');
+            a.style.visibility = 'hidden';
+            })</script>
+
+
     <script type="text/javascript">
 
         $(document).ready(function () {
@@ -55,7 +63,7 @@
             <a href="#" class="cross"><span></span></a>
         </div>
     </header>
-
+    <a id="goTop">Top</a>
     @RenderBody()
 
     <footer class="field dark">
@@ -80,7 +88,7 @@
      -->
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery.cookiebar.js"></script>
-
+    <script src="~/js/SpinnerFace.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/scripts/fanoe.js"></script>
 </body>

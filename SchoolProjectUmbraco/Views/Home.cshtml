@@ -4,5 +4,24 @@
 	Layout = "Master.cshtml";
 }
 
-@CurrentPage.GetGridHtml("content", "fanoe")
-
+<link href="~/css/Spinner.css" rel="stylesheet" />
+<div class="out1">
+    <div class="fade-in">
+        <div class="container1">
+            <div class="one common1"></div>
+            <div class="two common1"></div>
+            <div class="three common1"></div>
+            <div class="four common1"></div>
+            <div class="five common1"></div>
+            <div class="six common1"></div>
+            <div class="seven common1"></div>
+            <div class="eight common1"></div>
+        </div>
+        <div class="bar1">
+            <div class="progress1"></div>
+        </div>
+    </div>
+</div>
+<div id="homeDiv">
+    @CurrentPage.GetGridHtml("content", "fanoe")
+</div>
