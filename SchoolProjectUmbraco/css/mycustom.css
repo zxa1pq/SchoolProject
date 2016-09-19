@@ -1,4 +1,4 @@
-html,
+﻿html,
 body,
 div,
 span,
@@ -542,6 +542,7 @@ html,
 body {
     width: 100%;
     overflow-x: hidden;
+    margin-bottom: 50px;
 
 }
 
@@ -1264,6 +1265,7 @@ pre {
     body {
         width: 100vw;
         overflow-x: hidden;
+        margin-bottom: 100px;
         min-height: 400px;
         clear: both;
     }
@@ -1365,9 +1367,9 @@ pre {
         font-size: 10px !important;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .dark, .light, .yellow, .blue, .purple {
-     
+        padding: 20px;
    
          }
 
@@ -1381,12 +1383,6 @@ pre {
             line-height: 1.3 !important;
             letter-spacing: 0.6px !important;
         }
-
-    .companyInfo ul li{
-        float:right;
-        padding-right:35px;
-        
-    }
 }
 
 @media (max-width: 300px) {

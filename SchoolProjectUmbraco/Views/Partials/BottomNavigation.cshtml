@@ -1,5 +1,4 @@
-﻿
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 
 @{
 
@@ -18,7 +17,7 @@ foreach (var childPage in home.Children.Where("Visible"))
         @if (childPage.Children.Where("Visible").Any())
         {
             <span>@childPage.Name</span>
-                @childPages(childPage.Children)
+            @childPages(childPage.Children)
         }
     </div>
     }
@@ -54,7 +53,7 @@ if (pages.Any())
     </ul>
 </div>
 <div class="companyInfo">
-    
+
     <ul>
         <li for="companyName"></i>&copy;@Umbraco.Content(1058).companyName</li>
         <li for="companyEmail">&#9993;<a href="mailto:@(@Umbraco.Content(1058).companyEmail)">@(@Umbraco.Content(1058).companyEmail)</a></li>
